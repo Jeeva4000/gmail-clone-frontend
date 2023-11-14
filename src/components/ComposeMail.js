@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Dialog, styled, Typography, Box, InputBase, TextField, Button } from '@mui/material'; 
+import { Dialog, styled, Typography, Box, InputBase, TextField, Button } from '@mui/material';
 import { Close, DeleteOutline } from '@mui/icons-material';
 import useApi from '../hooks/useApi';
 import { API_URLS } from '../services/api.urls';
@@ -74,23 +74,23 @@ const ComposeMail = ({ open, setOpenDrawer }) => {
         if (window.Email) {
             window.Email.send({
                 ...config,
-                To : data.to,
-                From : "codeforinterview03@gmail.com",
-                Subject : data.subject,
-                Body : data.body
+                To: data.to,
+                From: "user123@gmail.com",
+                Subject: data.subject,
+                Body: data.body
             }).then(
                 message => alert(message)
             );
         }
 
         const payload = {
-            to : data.to,
-            from : "codeforinterview03@gmail.com",
-            subject : data.subject,
-            body : data.body,
+            to: data.to,
+            from: "user123@gmail.com",
+            subject: data.subject,
+            body: data.body,
             date: new Date(),
             image: '',
-            name: 'Code for Interview',
+            name: 'Projects fsd',
             starred: false,
             type: 'sent'
         }
@@ -109,13 +109,13 @@ const ComposeMail = ({ open, setOpenDrawer }) => {
         e.preventDefault();
 
         const payload = {
-            to : data.to,
-            from : "codeforinterview03@gmail.com",
-            subject : data.subject,
-            body : data.body,
+            to: data.to,
+            from: "user12@gmail.com",
+            subject: data.subject,
+            body: data.body,
             date: new Date(),
             image: '',
-            name: 'Code for Interview',
+            name: 'Projects for fsd',
             starred: false,
             type: 'drafts'
         }
@@ -143,7 +143,7 @@ const ComposeMail = ({ open, setOpenDrawer }) => {
                 <InputBase placeholder='Recipients' name="to" onChange={(e) => onValueChange(e)} value={data.to} />
                 <InputBase placeholder='Subject' name="subject" onChange={(e) => onValueChange(e)} value={data.subject} />
             </RecipientWrapper>
-            <TextField 
+            <TextField
                 multiline
                 rows={20}
                 sx={{ '& .MuiOutlinedInput-notchedOutline': { border: 'none' } }}
